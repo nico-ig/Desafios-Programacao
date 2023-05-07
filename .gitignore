@@ -5,4 +5,5 @@
 !.git*
 !semana*
 !semana*/*.cpp
-!*/makefile
+!makefile
+!template.cpp
