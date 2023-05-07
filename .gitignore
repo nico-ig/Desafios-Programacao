@@ -3,5 +3,5 @@
 
 # Except
 !.git*
-!*/*.cpp
+!semana*/*.cpp
 !*/makefile
