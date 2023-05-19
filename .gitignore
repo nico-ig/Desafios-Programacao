@@ -3,7 +3,7 @@
 
 # Except
 !.git*
-!semana*
+#!semana*
 !semana*/*.cpp
 !makefile
 !template.cpp
