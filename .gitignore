@@ -1,9 +1,13 @@
 # Ignore everything 
 *
-
 # Except
 !.git*
-#!semana*
+!semana*
 !semana*/*.cpp
 !makefile
 !template.cpp
+
+# Do ignore this, were removed in the Except
+semana*/makefile
+semana*/template.cpp
+
