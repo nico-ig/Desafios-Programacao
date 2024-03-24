@@ -4,18 +4,27 @@ using ll = long long;
 using ull = unsigned long long;
 
 void fat(ull n) {
-  for (ull i = sqrt; i*i <= n; i++) {
+  vector<pair<ull, ull>> primes;
+  for (ull i = 2; i*i <= n; i++) {
     ull cnt = 0;
     while (n % i == 0) { 
       n /= i; cnt++;
     }
 
     if(cnt > 0) {
-      cout << i << " " << cnt << "\n";
+      primes.push_back(make_pair(i, cnt));
     }
   }
 
-  if (n > 1) { cout << n << " " << 1 << "\n"; }
+  if (n > 1) { primes.push_back(make_pair(n, 1)); }
+  sort(primes.begin(), primes.end(), 
+       [](pair<ull, ull> lhs, pair<ull, ull> rhs) {
+          return rhs.first < lhs.first;
+        });
+
+  for ( auto pr : primes ) {
+    cout << pr.first << " " << pr.second << "\n";
+  }
 }
 
 int main() {
